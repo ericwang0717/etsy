@@ -1,0 +1,16 @@
+<%= form_for(@category) do |f| %>
+
+  <div class="name">
+     <%= f.label :name %><br>
+   <%= f.text_field :name %>
+
+  </div>
+  <div class="thumburl">
+     <%= f.label :thumburl %><br>
+   <%= f.text_field :thumburl %>
+
+  </div>
+  <div class="actions">
+  <%= f.submit %>
+  </div>
+<% end %>
