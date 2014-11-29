@@ -1,24 +1,17 @@
 EtsyApp::Application.routes.draw do
   
   
-  get "categories/index"
-  get "categories/show"
-  get "categories/new"
-  get "categories/edit"
-  get "categories/delete"
-  get 'pages/home'
-  
-  
-  get '/' => 'pages#home'
 
-    resources :categories
-    get 'categories/:id/delete' => 'categories#delete', :as => :categories_delete
-  
-  
-  
+  get 'pages/home'
   get 'pages/index'
-  
   get 'pages/render_demo'
+  get '/' => 'pages#home'
+  
+  
+  resources :categories
+    #get 'categories/:id/delete' => 'categories#delete', :as => :categories_delete
+    #as 的作用是别名
+  
   
   root 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
