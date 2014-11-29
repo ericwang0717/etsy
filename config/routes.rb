@@ -2,15 +2,41 @@ EtsyApp::Application.routes.draw do
   
   
 
+  get "products/index"
+  get "products/show"
+  get "products/new"
+  get "products/edit"
+  get "products/delete"
   get 'pages/home'
   get 'pages/index'
   get 'pages/render_demo'
   get '/' => 'pages#home'
   
   
-  resources :categories
+
     #get 'categories/:id/delete' => 'categories#delete', :as => :categories_delete
     #as 的作用是别名
+  
+  
+  
+  
+  
+  
+    get '/' => 'pages#home'
+
+    resources :categories
+    get 'categories/:id/delete' => 'categories#delete', :as => :categories_delete
+
+    resources :products
+   # get 'products/:id/delete' => 'products#delete', :as => :products_delete
+    
+  
+  
+  
+  
+  
+  
+  
   
   
   root 'pages#home'
